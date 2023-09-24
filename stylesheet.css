@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.sketch-container  {
+    display: flex;
+    align-self: center;
+    flex-wrap: wrap;
+    height: 400px;
+    width: 400px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color:  red;
+    /* Make each box 25px width / height in order to fit inside evenly. */
+    /* Make wrap after 16 boxes. */
+}
+
+.box {}
+
+
+p  {
+    color: black;
+    font-weight:  bolder;
+}
