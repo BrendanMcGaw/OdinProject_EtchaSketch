@@ -9,6 +9,9 @@ let sizePercentage;
 
 // Creates an event listener that upon clicking the "Button" will prompt the user to input the amount of detail desired in the grid.
 promptButton.addEventListener("click", function() {
+    if (totalSquares != 0 ){
+        cleanTheGrid();
+    }
     numberOfSquares = prompt("Please enter an amount of squares, less than 100.");
     // Limits the number of squares to 100 x 100 for performance sake.
     if (numberOfSquares > 100) {
@@ -21,6 +24,15 @@ promptButton.addEventListener("click", function() {
     gridBuilder();
 });
 
+// Sweeps through the grid, removing all previous boxes created for the grid.
+cleanTheGrid = () => {
+    const gridBoxes = document.getElementsByClassName("box")
+    // Removes the first div of the box class repeatedly until it is no longer true.
+    while (gridBoxes[0]) {
+        // Removes child from the parent node.
+        gridBoxes[0].parentNode.removeChild(gridBoxes[0]);
+    }
+}
 // Takes the amount of squares chosen and finds what percentage it takes for those numberOfSquares to distribute covering 100% of the container.
 // Can then be used in the boxBuilder to individually create the boxes at the correct width and height percentage.
 calculateBoxSize = () => {
