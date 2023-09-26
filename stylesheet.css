@@ -5,10 +5,10 @@ body {
 
 .sketch-container  {
     display: flex;
-    align-self: center;
+    justify-content: center;
     flex-wrap: wrap;
-    height: 400px;
-    width: 400px;
+    height: 960px;
+    width: 960px;
     border-style: solid;
     border-color: black;
     border-radius: 5px;
@@ -18,10 +18,12 @@ body {
     /* Make wrap after 16 boxes. */
 }
 
-.box {}
-
 
 p  {
     color: black;
     font-weight:  bolder;
+}
+
+button {
+    display: flex;
 }
